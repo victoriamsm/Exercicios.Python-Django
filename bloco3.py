@@ -24,10 +24,14 @@ print(f'Ao todo são {totMed} alunos acima da média!')
 '''
 
 #2 -- inverso
-'''
-nome = str(input('Digite seu nome para vê-lo AO CONTRÁRIO: ')).strip().upper()
-print(f'Seu nome {nome} de forma inversa é {nome[::-1]}!')
-'''
+
+nome = input('Digite seu nome para vê-lo AO CONTRÁRIO: ').strip().upper()
+letras = []
+for i in range(len(nome)-1, -1,-1):
+    letras.append(nome[i])
+print(f'Seu nome {nome} de forma inversa é {("".join(letras))}!')
+
+
 
 #3 -- dicionário 
 '''
@@ -41,7 +45,7 @@ for k, v in dicionario.items():
 '''
 
 #4 -- investigação
-
+'''
 lista_perg = ['Telefonou para vítima?','Esteve no local do crime?', 
               'Mora perto da vítima?', 'Devia para vítima?',
                 'Já trabalhou com a vítima?']
@@ -61,3 +65,4 @@ elif totS <= 4:
     print('Status: CÚMPLICE')
 elif totS == 5:
     print('Status: ASSASSINO')
+'''

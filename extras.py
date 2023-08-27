@@ -41,9 +41,12 @@ print(f'O novo salário do funcionário é de R${nsal}')
 #4 -- apenas números
 
 def leiaInt():
-    try:
-        num = int(input('Digite um número: '))
-        print(f'Número {num} cadastrado com sucesso!')
-    except ValueError:
-        print('ERRO! Apenas números.')
+    while True:
+        try:
+            num = int(input('Digite um número: '))
+            print(f'Número {num} cadastrado com sucesso!')
+            if True:
+                break
+        except ValueError:
+            print('ERRO! Apenas números.')
 leiaInt()
